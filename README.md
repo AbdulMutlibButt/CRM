@@ -25,12 +25,12 @@ The current repository is a polished frontend prototype with realistic mock data
 ## Tech stack
 
 - React 19
+- Next.js 16
 - TypeScript
 - Tailwind CSS 4
-- Vinext / Vite
 - Shadcn UI primitives
 - Lucide icons
-- Cloudflare Workers-compatible build
+- Vercel-compatible Next.js build
 
 ## Local development
 
@@ -46,7 +46,7 @@ npm ci
 npm run dev
 ```
 
-Open the local URL printed in the terminal, normally `http://localhost:5173`.
+Open the local URL printed in the terminal, normally `http://localhost:3000`.
 
 ## Production build
 
@@ -55,7 +55,7 @@ npm run build
 npm run start
 ```
 
-The production build is generated under `dist/`.
+The production build is generated under `.next/`, including the route manifest expected by Vercel.
 
 ## Main source files
 
