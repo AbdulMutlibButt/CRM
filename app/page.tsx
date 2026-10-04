@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 import {
   Activity,
@@ -185,15 +186,15 @@ function t(lang: Lang, en: string, ur: string) {
   return lang === "ur" ? ur : en;
 }
 
-function Logo() {
+function Logo({ light = false }: { light?: boolean }) {
   return (
     <div className="flex items-center gap-3 px-2 py-2">
-      <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-teal-400 text-slate-950 shadow-[0_8px_20px_rgba(45,212,191,.24)]">
-        <Activity className="size-5" strokeWidth={2.5} />
+      <div className="relative h-12 w-16 shrink-0 overflow-hidden rounded-lg bg-white group-data-[collapsible=icon]:size-10">
+        <Image src="/speed-vision-logo.jpg" alt="Speed vision logo" fill sizes="64px" className="object-contain" priority />
       </div>
       <div className="group-data-[collapsible=icon]:hidden">
-        <p className="text-[15px] font-extrabold tracking-[-.02em] text-white">NexLink Ops</p>
-        <p className="text-xs text-slate-400">Karachi Network</p>
+        <p className={`text-[15px] font-extrabold tracking-[-.02em] ${light ? "text-slate-950" : "text-white"}`}>Speed vision</p>
+        <p className={`text-xs ${light ? "text-slate-500" : "text-slate-400"}`}>FTTH Broadband</p>
       </div>
     </div>
   );
@@ -660,9 +661,9 @@ function LoginView({ onLogin }: { onLogin: () => void }) {
           <div className="flex items-center gap-2 text-sm text-slate-500"><ShieldCheck className="size-4" /> Secure, role-based access</div>
         </div>
         <div className="flex min-h-[600px] flex-col justify-center p-7 sm:p-12">
-          <div className="mb-8 lg:hidden"><Logo /></div>
+          <div className="mb-8 lg:hidden"><Logo light /></div>
           <p className="text-sm font-bold uppercase tracking-[.12em] text-blue-600">Welcome back</p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-950">Sign in to NexLink Ops</h2>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-950">Sign in to Speed vision</h2>
           <p className="mt-2 text-sm text-slate-500">Use your staff account to continue.</p>
           <form className="mt-8 space-y-4" onSubmit={(e) => { e.preventDefault(); onLogin(); }}>
             <div><label className="field-label">Email or username</label><input className="h-12 w-full rounded-xl border border-slate-200 px-4 text-sm outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10" defaultValue="ahsan.admin" /></div>
@@ -756,7 +757,7 @@ export default function Home() {
     register({
       name: "navigate_ops_module",
       title: "Open operations module",
-      description: "Navigate the visible NexLink Ops workspace to a requested module.",
+      description: "Navigate the visible Speed vision workspace to a requested module.",
       inputSchema: {
         type: "object",
         properties: { module: { type: "string", enum: [...navigation.map((item) => item.id), "technician"] } },

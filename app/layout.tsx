@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "NexLink Ops — Karachi ISP CRM & ERP",
-  description: "Billing, customers, support and network operations in one workspace.",
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  title: "Speed vision — ISP CRM & ERP",
+  description: "Speed vision FTTH Broadband — billing, customers, support and network operations in one workspace.",
+  icons: { icon: "/speed-vision-logo.jpg", shortcut: "/speed-vision-logo.jpg", apple: "/speed-vision-logo.jpg" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

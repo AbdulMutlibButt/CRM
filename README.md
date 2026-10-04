@@ -1,10 +1,10 @@
-# NexLink Ops — ISP CRM + ERP
+# Speed vision — ISP CRM + ERP
 
 A responsive CRM, finance, support, and network-operations dashboard designed for an internet service provider in Karachi, Pakistan.
 
 ## Live demo
 
-https://karachi-isp-ops.lofty-rain-7704.chatgpt.site
+https://isp-crm-erp.vercel.app
 
 ## Included modules
 
@@ -62,7 +62,7 @@ The production build is generated under `.next/`, including the route manifest e
 - `app/page.tsx` — dashboard screens, state, and interactions
 - `app/globals.css` — theme, responsive styling, RTL, and dark mode
 - `components/ui/` — reusable interface primitives
-- `public/favicon.svg` — project favicon
+- `public/speed-vision-logo.jpg` — company logo and browser icon
 
 ## Notes
 
