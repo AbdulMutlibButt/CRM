@@ -11,6 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "test:crm": "node --experimental-strip-types --test lib/crm.test.ts",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
